@@ -225,35 +225,35 @@ These contract functions exist but were not exercised during testing: `registerD
 ## Screenshots
 
 ### Smart contract compilation
-![Compilation](screenshots/Successful_compilation.png)
+![Compilation](myScreenshots/Successful_compilation.png)
 
 ### Smart contract deployment (Ganache)
-![Deployment](screenshots/Successful_Deployment.png)
+![Deployment](myScreenshots/Successful_Deployment.png)
 
 ### MetaMask wallet connection
-![Wallet connected](screenshots/Wallet_connected_successfully.png)
+![Wallet connected](myScreenshots/Wallet_connected_successfully.png)
 
 ### Successful transaction
 Contract-level (Remix VM):
 
-![Successful transaction in Remix](screenshots/Successful_transaction.png)
+![Successful transaction in Remix](myScreenshots/Successful_transaction.png)
 
 Through the UI (Ganache), including blockchain data displayed on the page:
 
-![Successful transaction and data in UI](screenshots/Successful_transaction_UI_BlockChain_data.png)
+![Successful transaction and data in UI](myScreenshots/Successful_transaction_UI_BlockChain_data.png)
 
 ### Failed transactions
 Unauthorised call in Remix VM (`Only admin`):
 
-![Failed transaction in Remix](screenshots/Failed_transaction.png)
+![Failed transaction in Remix](myScreenshots/Failed_transaction.png)
 
 Unauthorised call through the UI (Ganache):
 
-![Failed transaction in UI](screenshots/Failed_transaction_UI_BlockChain_data.png)
+![Failed transaction in UI](myScreenshots/Failed_transaction_UI_BlockChain_data.png)
 
 Invalid input, age 17, mined with status 0 (Ganache):
 
-![Invalid input](screenshots/Invalid.png)
+![Invalid input](myScreenshots/Invalid.png)
 
 ## Security and Limitations
 
