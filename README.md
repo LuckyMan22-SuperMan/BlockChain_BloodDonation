@@ -254,15 +254,3 @@ Unauthorised call through the UI (Ganache):
 Invalid input, age 17, mined with status 0 (Ganache):
 
 ![Invalid input](myScreenshots/Invalid.png)
-
-## Security and Limitations
-
-- No private keys, recovery phrases or credentials are included in this repository. Account private keys stay inside MetaMask and the Ganache terminal.
-- Authorization is enforced by the smart contract, not only by the interface.
-- Data on the chain is public. Donor names and ages should not be real personal data in a real deployment.
-- The `Revoke` button in the UI is not connected to the contract in this version. `revokeHospital` exists in the contract and can be called from Remix.
-- The UI shows request cards and totals but does not list individual donation records.
-- The UI does not check which network MetaMask is on. It must be set to the Ganache network for `localhost:3000`.
-- The UI shows raw gas-estimation errors rather than the contract's revert reason for rejected calls.
-- The frontend loads requests one at a time and is intended for a small assignment demonstration.
-- Deployed on a local Ganache chain for educational testing only.
