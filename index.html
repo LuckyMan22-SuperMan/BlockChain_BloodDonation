@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blood Donation Registry</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <main>
+    <h1>Blood Donation Registry</h1>
+    <p>Coordinate blood requests and track verified donations on the blockchain.</p>
+
+    <button id="connectButton" type="button">Connect MetaMask</button>
+    <p id="account">Wallet not connected</p>
+    <p id="status" role="status"></p>
+
+    <section>
+      <h2>Network Statistics</h2>
+      <button id="refreshButton" type="button">Refresh data</button>
+      <ul id="statsList">
+        <li>Donors: <span id="statDonors">0</span></li>
+        <li>Requests: <span id="statRequests">0</span></li>
+        <li>Donations: <span id="statDonations">0</span></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Admin: Manage Hospitals</h2>
+      <form id="adminForm">
+        <label for="hospitalAddress">Hospital Address</label>
+        <input id="hospitalAddress" name="hospitalAddress" required placeholder="0x...">
+        
+        <label for="hospitalName">Hospital Name</label>
+        <input id="hospitalName" name="hospitalName" placeholder="City Hospital">
+        
+        <button type="button" id="approveHospitalBtn">Approve</button>
+        <button type="button" id="revokeHospitalBtn">Revoke</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Donor: Register</h2>
+      <form id="donorForm">
+        <label for="donorName">Full Name</label>
+        <input id="donorName" name="donorName" required placeholder="John Doe">
+        
+        <label for="donorAge">Age</label>
+        <input id="donorAge" type="number" name="donorAge" required min="18" max="65" placeholder="25">
+        
+        <label for="donorGroup">Blood Group</label>
+        <select id="donorGroup" name="donorGroup">
+          <option value="0">A+</option><option value="1">A-</option>
+          <option value="2">B+</option><option value="3">B-</option>
+          <option value="4">AB+</option><option value="5">AB-</option>
+          <option value="6">O+</option><option value="7">O-</option>
+        </select>
+
+        <button type="submit">Register as Donor</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Hospital: Create Request</h2>
+      <form id="requestForm">
+        <label for="requestGroup">Blood Group</label>
+        <select id="requestGroup" name="requestGroup">
+          <option value="0">A+</option><option value="1">A-</option>
+          <option value="2">B+</option><option value="3">B-</option>
+          <option value="4">AB+</option><option value="5">AB-</option>
+          <option value="6">O+</option><option value="7">O-</option>
+        </select>
+        
+        <label for="requestUnits">Units Required</label>
+        <input id="requestUnits" type="number" name="requestUnits" required min="1" max="20" placeholder="5">
+        
+        <button type="submit">Create Request</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Hospital: Record Donation</h2>
+      <form id="recordForm">
+        <label for="actionRequestId">Request ID</label>
+        <input id="actionRequestId" type="number" name="actionRequestId" required placeholder="0">
+        
+        <label for="actionDonor">Donor Address</label>
+        <input id="actionDonor" name="actionDonor" required placeholder="0x...">
+        
+        <button type="submit">Record Donation</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Active Requests & Logs</h2>
+      <div id="dataOutput"></div>
+    </section>
+  </main>
+</body>
+</html>
